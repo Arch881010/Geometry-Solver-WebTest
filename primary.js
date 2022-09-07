@@ -1,3 +1,7 @@
 document.getElementById("submit").onclick = function () {
-    alert(document.getElementById("math-type").value);
+    if(document.getElementById("math-type").value == "distance"){
+
+    }else if(document.getElementById("math-type").value == "peremeter"){
+        
+    }
 }
