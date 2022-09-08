@@ -10,7 +10,7 @@ currently being supported with security updates.
 | x.x.x   | :x:                |
 | x.x.x   | :x:                |
 | x.x.x   | :x:                |
-| < 0.1   | :x:                |
+| < 0.8   | :x:                |
 
 ## Reporting a Vulnerability
 
