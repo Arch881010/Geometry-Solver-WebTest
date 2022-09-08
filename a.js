@@ -26,6 +26,10 @@ document.getElementById("submit").onclick = function () {
         var b2 = document.createElement("input");
         b2.setAttribute("style", "text");
         b2.setAttribute("id", 'b2');
+        var b1 = document.createElement("input");
+        b1.setAttribute("id", "b1");
+        b1.setAttribute("style", "text");
+        
         //ABOVE THIS SHOULD BE CHANGED FOR ONLY ADDING MORE BR, ETC
         //br1 = BR in HTML
         //t1 = First of line of text
