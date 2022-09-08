@@ -10,11 +10,9 @@ document.getElementById("submit").onclick = function () {
         } else {
         var br1 = document.createElement("br");
         br1.setAttribute("id", "br1");
-        document.body.appendChild(br1);
         var t1 = document.createElement("text");
         t1.setAttribute("stye", "text");
         t1.setAttribute("id", "t1");
-        t1.body.appendChild(t1);
         documet.getElementById("t1").innerHTML("First point x");
         var t1b = document.createElement("text");
         t1b.setAttribute("stye", "text");
@@ -22,14 +20,20 @@ document.getElementById("submit").onclick = function () {
         var b2b = document.createElement("input");
         b2b.setAttribute("style", "text");
         b2b.setAttribute("id", "b2b");
-        document.body.appendChild(b1);
         var br1 = document.createElement("br");
         br1.setAttribute("id", "br1");
         document.body.appendChild(br1);
         var b2 = document.createElement("input");
         b2.setAttribute("style", "text");
         b2.setAttribute("id", 'b2');
-        document.body.appendChild(b2);
+        //ABOVE THIS SHOULD BE CHANGED FOR ONLY ADDING MORE BR, ETC
+        //br1 = BR in HTML
+        //t1 = First of line of text
+        //t1b = First of line of text B
+        //b2b = Box 2 B
+        //b2 = Box 2
+        
+        //BELOW THIS SHOULD NOT BE CHANGED
         document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
         var b1b2 = true;
         }
