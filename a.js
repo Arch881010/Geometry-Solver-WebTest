@@ -30,18 +30,11 @@ b2 = Box 2
 //v ONCLICK
 document.getElementById("submit").onclick = function () {
     if(document.getElementById("math-type").value == "peremeter"){
-        if(document.getElementById("T/FStat").value === "True") {
-            alert("Refresh your page!!");
-        } else {  
 
         //BELOW THIS SHOULD NOT BE CHANGED
         document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
         document.getElementById("T/FStat").innerHTML = "True";
-        }
     } else if(document.getElementById("math-type").value == "distance") {
-        if(document.getElementById("T/FStat").value === "True") {
-            alert("Refreh your page!!");
-        } else {
         //br1 = BR in HTML
         //t1 = First of line of text
         //t1b = First of line of text B
@@ -58,5 +51,4 @@ document.getElementById("submit").onclick = function () {
         document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
         document.getElementById("T/FStat").innerHTML = "True";
         }
-    }
 };
