@@ -27,12 +27,17 @@ document.getElementById("submit").onclick = function () {
     b1.setAttribute("id", "b1");
     b1.setAttribute("style", "text");
     var b1b = document.createElement("input");
+    b1b.setAttribute("id", "b1b");
+    b1b.setAttribute("style", "text")
+    b1.setAttribute("type", "number");
+    b1b.setAttribute("type", "number");
+    b2.setAttribute("type", "number");
+    b2b.setAttribute("type", "number");
     //^ HTML ELEMENTS
     //space
         if(document.getElementById("math-type").value == "blank" /* PEREMETER - USE FOR ONLY TESTING (BLANK)*/){
     
             //BELOW THIS SHOULD NOT BE CHANGED
-            document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
             document.getElementById("T/FStat").innerHTML = "True";
         } else if(document.getElementById("math-type").value == "distance") {
             //br1 = BR in HTML
@@ -45,11 +50,10 @@ document.getElementById("submit").onclick = function () {
             document.body.appendChild(b1);
             document.body.appendChild(br1);
             document.body.appendChild(t1b);
-            document.getElementById("t1b").innerHTML = "Y1";
+            document.getElementById("t1b").innerHTML = "\n Y1";
             document.body.appendChild(b1b);
             //BELOW THIS SHOULD NOT BE CHANGED
             document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
-            document.getElementById("T/FStat").innerHTML = "True";
             }
     };
     
