@@ -84,7 +84,7 @@ document.getElementById("submit").onclick = function () {
             document.body.appendChild(ty2);
             document.getElementById("ty2").innerHTML = " Y2: ";
             document.body.appendChild(b2b);
-            document.body.appendChild(br);
+            document.body.appendChild(br1);
             document.body.appendChild(solve);
             document.body.appendChild(equ);
             equ.innerHTML = "Get Equation";
