@@ -14,6 +14,14 @@ document.getElementById("submit").onclick = function () {
     var b2b = document.createElement("input");
     var b3 = document.createElement("input");
     var b3b = document.createElement("input");
+    var solve = document.createElement("button");
+    var equ = document.createElement("button");
+    //solve ID + STYLE
+    solve.setAttribute("style", "text");
+    solve.setAttribute("id", "solve");
+    //equ ID + STYLE
+    equ.setAttribute("style", "style");
+    equ.setAttribute('id', "equ");
     //Tx1 ID + STYLE
     tx1.setAttribute("stye", "text");
     tx1.setAttribute("id", "tx1");
@@ -75,8 +83,12 @@ document.getElementById("submit").onclick = function () {
             document.body.appendChild(b2);
             document.body.appendChild(ty2);
             document.getElementById("ty2").innerHTML = " Y2: ";
-            document.body.appendChild(b3);
-            document.appendChild(br1);
+            document.body.appendChild(b2b);
+            document.body.appendChild(br);
+            document.body.appendChild(solve);
+            document.body.appendChild(equ);
+            equ.innerHTML = "Get Equation";
+            solve.innerHTML = "Solve";
             //BELOW THIS SHOULD NOT BE CHANGED
             document.getElementByName("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
             }
