@@ -62,7 +62,7 @@ document.getElementById("submit").onclick = function () {
     //^ HTML ELEMENTS
     //space
     ///// V ONCLICK
-        if(document.getElementById("math-type").value == "blank" /* PEREMETER - USE FOR ONLY TESTING (BLANK)*/){
+        if(document.getElementById("math-type").value == "peremeter"){
     
             //BELOW THIS SHOULD NOT BE CHANGED
         } else if(document.getElementById("math-type").value == "distance") {
@@ -92,5 +92,12 @@ document.getElementById("submit").onclick = function () {
             //BELOW THIS SHOULD NOT BE CHANGED
             document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
             }
+    };
+    document.getElementById("equ") = function() {
+        if(document.getElementById("math-type").value == "peremeter") {
+
+        } else if (document.getElementById("math-type").value == "distance") {
+            alert("√((x₁ - x₂)² + (y₁ - y₂)²)");
+        }
     };
     
