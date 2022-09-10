@@ -93,11 +93,15 @@ document.getElementById("submit").onclick = function () {
             document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
             }
     };
+    if (document.getElementById("equ") == "null") {
+
+    } else {
     document.getElementById("equ").onclick = function () {
         if(document.getElementById("math-type").value == "peremeter") {
 
         } else if (document.getElementById("math-type").value == "distance") {
             alert("√((x₁ - x₂)² + (y₁ - y₂)²)");
         }
+    }
     };
     
