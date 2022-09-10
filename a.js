@@ -66,7 +66,6 @@ document.getElementById("submit").onclick = function () {
             document.body.appendChild(tx1);
             document.getElementById("tx1").innerHTML = "X1: ";
             document.body.appendChild(b1);
-            document.body.appendChild(br);
             document.body.appendChild(ty1);
             document.getElementById("ty1").innerHTML = " Y1: ";
             document.body.appendChild(b1b);
