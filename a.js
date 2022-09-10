@@ -4,6 +4,8 @@ document.getElementById("submit").onclick = function () {
     var br = document.createElement("br"); //BR 
     var tx1 = document.createElement("text"); //Tx1 / X1
     var ty1 = document.createElement("text"); //Ty1 / Y1
+    var tx2 = document.createElement("text");
+    var ty2 = document.createElement("text");
     var b1 = document.createElement("input"); 
     var b1b = document.createElement("input");
     var b2 = document.createElement("input");
@@ -31,6 +33,12 @@ document.getElementById("submit").onclick = function () {
     //B2B ID + STYLE
     b2b.setAttribute("style", "text");
     b2b.setAttribute("id", 'b2b');
+    //tx2 ID + STYLE 
+    tx2.setAttribute("style", "text");
+    tx2.setAttribute("id", "tx2");
+    //ty2 ID + STYLE 
+    ty2.setAttribute("style", "text");
+    ty2.setAttribute("id", "ty2");
     //SETS BOXES AS NUMBERS
     b1.setAttribute("type", "number");
     b1b.setAttribute("type", "number");
@@ -42,7 +50,6 @@ document.getElementById("submit").onclick = function () {
         if(document.getElementById("math-type").value == "blank" /* PEREMETER - USE FOR ONLY TESTING (BLANK)*/){
     
             //BELOW THIS SHOULD NOT BE CHANGED
-            document.getElementById("T/FStat").innerHTML = "True";
         } else if(document.getElementById("math-type").value == "distance") {
             //br = BR in HTML
             //t1 = First of line of text
@@ -56,6 +63,11 @@ document.getElementById("submit").onclick = function () {
             document.body.appendChild(ty1);
             document.getElementById("ty1").innerHTML = "Y1";
             document.body.appendChild(b1b);
+            document.body.appendChild(tx2);
+            document.getElementById("tx2").innerHTML = "X2";
+            document.body.appendChild(b2);
+            document.body.appendChild(ty2);
+            document.getElementById("ty2").innerHTML = "Y2";
             //BELOW THIS SHOULD NOT BE CHANGED
             document.getElementByName("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
             }
