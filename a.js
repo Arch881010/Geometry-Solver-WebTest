@@ -69,6 +69,7 @@ document.getElementById("submit").onclick = function () {
             document.body.appendChild(ty1);
             document.getElementById("ty1").innerHTML = " Y1: ";
             document.body.appendChild(b1b);
+            document.body.appendChild(br);
             document.body.appendChild(tx2);
             document.getElementById("tx2").innerHTML = "X2: ";
             document.body.appendChild(b2);
