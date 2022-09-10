@@ -76,6 +76,8 @@ document.getElementById("submit").onclick = function () {
             document.body.appendChild(b2);
             document.body.appendChild(ty2);
             document.getElementById("ty2").innerHTML = "Y2";
+            document.body.appendChild(b3);
+            document.appendChild(br);
             //BELOW THIS SHOULD NOT BE CHANGED
             document.getElementByName("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
             }
