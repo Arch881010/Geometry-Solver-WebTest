@@ -93,7 +93,7 @@ document.getElementById("submit").onclick = function () {
             document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
             }
     };
-    document.getElementById("equ") = function () {
+    document.getElementById("equ").onclick = function () {
         if(document.getElementById("math-type").value == "peremeter") {
 
         } else if (document.getElementById("math-type").value == "distance") {
