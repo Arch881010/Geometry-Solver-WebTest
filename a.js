@@ -14,8 +14,6 @@ document.getElementById("submit").onclick = function () {
     var b2b = document.createElement("input");
     var b3 = document.createElement("input");
     var b3b = document.createElement("input");
-    //BR ADDS <BR>
-    br.innerHTML = "<br/>"
     //Tx1 ID + STYLE
     tx1.setAttribute("stye", "text");
     tx1.setAttribute("id", "tx1");
