@@ -1,8 +1,8 @@
 //v ONCLICK
 document.getElementById("submit").onclick = function () {
     // SPACE
-    var br = document.createElement("span"); //BR 
-    var br1 = document.createElement("br");
+    var br = document.createElement('br'); //BR 
+    var br1 = document.createElement('br');
     var br2 = document.createElement('br');
     var tx1 = document.createElement("text"); //Tx1 / X1
     var ty1 = document.createElement("text"); //Ty1 / Y1
