@@ -2,6 +2,8 @@
 document.getElementById("submit").onclick = function () {
     // SPACE
     var br = document.createElement("br"); //BR 
+    var br1 = document.createElement("br");
+    var br2 = document.createElement('br');
     var tx1 = document.createElement("text"); //Tx1 / X1
     var ty1 = document.createElement("text"); //Ty1 / Y1
     var tx2 = document.createElement("text");
@@ -12,9 +14,7 @@ document.getElementById("submit").onclick = function () {
     var b2b = document.createElement("input");
     var b3 = document.createElement("input");
     var b3b = document.createElement("input");
-    //BR APPEND AND ID
-    document.body.appendChild(br); 
-    br.setAttribute("id", "br");
+
     //Tx1 ID + STYLE
     tx1.setAttribute("stye", "text");
     tx1.setAttribute("id", "tx1");
@@ -65,19 +65,19 @@ document.getElementById("submit").onclick = function () {
             //b2b = Box 2 B
             //b2 = Box 2
             document.body.appendChild(tx1);
-            document.getElementById("tx1").innerHTML = "X1";
+            document.getElementById("tx1").innerHTML = "X1: ";
             document.body.appendChild(b1);
             document.body.appendChild(br);
             document.body.appendChild(ty1);
-            document.getElementById("ty1").innerHTML = "Y1";
+            document.getElementById("ty1").innerHTML = " Y1: ";
             document.body.appendChild(b1b);
             document.body.appendChild(tx2);
-            document.getElementById("tx2").innerHTML = "X2";
+            document.getElementById("tx2").innerHTML = "X2: ";
             document.body.appendChild(b2);
             document.body.appendChild(ty2);
-            document.getElementById("ty2").innerHTML = "Y2";
+            document.getElementById("ty2").innerHTML = " Y2: ";
             document.body.appendChild(b3);
-            document.appendChild(br);
+            document.appendChild(br1);
             //BELOW THIS SHOULD NOT BE CHANGED
             document.getElementByName("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
             }
