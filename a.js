@@ -39,11 +39,19 @@ document.getElementById("submit").onclick = function () {
     //ty2 ID + STYLE 
     ty2.setAttribute("style", "text");
     ty2.setAttribute("id", "ty2");
+    //B3 ID + STYLE   
+    b3.setAttribute("style", "text");
+    b3.setAttribute('id', 'b3');
+    //B3B ID + STYLE
+    b3b.setAttribute("style", "text");
+    b3b.setAttribute("style", "text");
     //SETS BOXES AS NUMBERS
     b1.setAttribute("type", "number");
     b1b.setAttribute("type", "number");
     b2.setAttribute("type", "number");
     b2b.setAttribute("type", "number");
+    b3.setAttribute("type", "number");
+    b3b.setAttribute("type", "number");
     //^ HTML ELEMENTS
     //space
     ///// V ONCLICK
