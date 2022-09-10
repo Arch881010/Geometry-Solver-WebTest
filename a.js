@@ -90,7 +90,7 @@ document.getElementById("submit").onclick = function () {
             equ.innerHTML = "Get Equation";
             solve.innerHTML = "Solve";
             //BELOW THIS SHOULD NOT BE CHANGED
-            document.getElementByID("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
+            document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
             }
     };
     
