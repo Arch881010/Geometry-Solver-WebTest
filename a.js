@@ -22,6 +22,7 @@ document.getElementById("submit").onclick = function () {
     //equ ID + STYLE
     equ.setAttribute("style", "style");
     equ.setAttribute('id', "equ");
+    equ.setAttribute("onclick", "equ()")
     //Tx1 ID + STYLE
     tx1.setAttribute("stye", "text");
     tx1.setAttribute("id", "tx1");
@@ -93,15 +94,12 @@ document.getElementById("submit").onclick = function () {
             document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
             }
     };
-    if (document.getElementById("equ") == "null") {
 
-    } else {
-    document.getElementById("equ").onclick = function () {
+    function equ () {
         if(document.getElementById("math-type").value == "peremeter") {
 
         } else if (document.getElementById("math-type").value == "distance") {
             alert("√((x₁ - x₂)² + (y₁ - y₂)²)");
         }
     }
-    };
     
