@@ -99,7 +99,7 @@ document.getElementById("submit").onclick = function () {
         if(document.getElementById("math-type").value == "peremeter") {
 
         } else if (document.getElementById("math-type").value == "distance") {
-            alert("√((x₁ - x₂)² + (y₁ - y₂)²)");
+            alert("√((x₂ - x₁)² + (y₂ - y₁)²)");
         }
     }
     
