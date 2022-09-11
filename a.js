@@ -92,7 +92,7 @@ document.getElementById("submit").onclick = function () {
             equ.innerHTML = "Get Equation";
             solve.innerHTML = "Solve";
             //BELOW THIS SHOULD NOT BE CHANGED
-            document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues.";
+            document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues if you switch type of calculation.";
             }
     };
 
@@ -112,11 +112,13 @@ document.getElementById("submit").onclick = function () {
             sx2 = Number(document.getElementById("b2").value);
             sy2 = Number(document.getElementById("b2b").value);
             sx = sx2 - sx1;
+            console.log(sx);
             sy = sy2 - sy1;
-            sxq = sx ^ 2;
-            syq = sy ^ 2;
+            console.log(sy);
+            sxq = sx ** 2;
+            syq = sy ** 2;
             dis = sxq + syq;
             ans = Math.sqrt(dis);
-            alert(ans);
+            alert(ans + " units."); 
         }
     }
