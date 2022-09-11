@@ -16,10 +16,11 @@ document.getElementById("submit").onclick = function () {
     var b3b = document.createElement("input");
     var solve = document.createElement("button");
     var equ = document.createElement("button");
-    //solve ID + STYLE
+    //solve ID + STYLE + FUNCTION
     solve.setAttribute("style", "text");
     solve.setAttribute("id", "solve");
-    //equ ID + STYLE
+    solve.setAttribute('onclick', 'solve()');
+    //equ ID + STYLE + FUNCTION
     equ.setAttribute("style", "style");
     equ.setAttribute('id', "equ");
     equ.setAttribute("onclick", "equ()")
