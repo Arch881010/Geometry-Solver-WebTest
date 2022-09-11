@@ -102,4 +102,20 @@ document.getElementById("submit").onclick = function () {
             alert("√((x₂ - x₁)² + (y₂ - y₁)²)");
         }
     }
-    
+    function solve () {
+        if(document.getElementById("math-type").value == "peremeter") {
+
+        } else if(document.getElementById("math-type").value == "distance") {
+            sx1 = number(document.getElementById("b1").value);
+            sy1 = number(document.getElementById("b1b").value);
+            sx2 = number(document.getElementById("b2").value);
+            sy2 = number(document.getElementById("b2b").value);
+            sx = sx2 - sx1;
+            sy = sy2 - sy1;
+            sxq = sx ^ 2;
+            syq = sy ^ 2;
+            dis = sxq + syq;
+            ans = sqrt(dis);
+            alert(ans);
+        }
+    }
