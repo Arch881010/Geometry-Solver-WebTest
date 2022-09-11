@@ -4,16 +4,23 @@ document.getElementById("submit").onclick = function () {
     var br = document.createElement("BR");   //BR 
     var br1 = document.createElement('br');
     var br2 = document.createElement('br');
+    var fbr = document.createElement("BR");
     var tx1 = document.createElement("text"); //Tx1 / X1
     var ty1 = document.createElement("text"); //Ty1 / Y1
     var tx2 = document.createElement("text");
     var ty2 = document.createElement("text");
+    var tx3 = document.createElement('text');
+    var ty3 = document.createElement("text");
+    var tx4 = document.createElement("text");
+    var ty4 = document.createElement("text");
     var b1 = document.createElement("input"); 
     var b1b = document.createElement("input");
     var b2 = document.createElement("input");
     var b2b = document.createElement("input");
     var b3 = document.createElement("input");
     var b3b = document.createElement("input");
+    var b4 = document.createElement('input');
+    var b4b = document.createElement('input');
     var solve = document.createElement("button");
     var equ = document.createElement("button");
     //solve ID + STYLE + FUNCTION
@@ -48,12 +55,30 @@ document.getElementById("submit").onclick = function () {
     //ty2 ID + STYLE 
     ty2.setAttribute("style", "text");
     ty2.setAttribute("id", "ty2");
+    //tx3 ID + STYLE
+    tx3.setAttribute("style", "text");
+    tx3.setAttribute("id", 'tx3');
+    //ty3 ID + STYLE
+    ty3.setAttribute('style', 'text');
+    ty3.setAttribute('id', 'ty3');
+    //tx4 ID + Style
+    tx4.setAttribute("style", "text");
+    tx4.setAttribute("id", 'tx4');
+    //ty4
+    ty4.setAttribute('style', 'text')
+    ty4.setAttribute('id', 'ty4');
     //B3 ID + STYLE   
     b3.setAttribute("style", "text");
     b3.setAttribute('id', 'b3');
     //B3B ID + STYLE
     b3b.setAttribute("style", "text");
-    b3b.setAttribute("style", "text");
+    b3b.setAttribute("id", "b3b");
+    //B4 ID + STYLE
+    b4.setAttribute('style', 'text');
+    b4.setAttribute("id", 'b4');
+    //B4B
+    b4b.setAttribute('style', 'text');
+    b4b.setAttribute('id', 'b4b');
     //SETS BOXES AS NUMBERS
     b1.setAttribute("type", "number");
     b1b.setAttribute("type", "number");
@@ -61,18 +86,43 @@ document.getElementById("submit").onclick = function () {
     b2b.setAttribute("type", "number");
     b3.setAttribute("type", "number");
     b3b.setAttribute("type", "number");
+    b4.setAttribute("type", "number");
+    b4b.setAttribute("type", "number");
     //^ HTML ELEMENTS
     //space
     ///// V ONCLICK
-        if(document.getElementById("math-type").value == "peremeter"){
-    
+        if(document.getElementById("math-type").value == "peremeter3"){
+            document.body.appendChild(tx1);
+            document.getElementById("tx1").innerHTML = "X1: ";
+            document.body.appendChild(b1);
+            document.body.appendChild(ty1);
+            document.getElementById("ty1").innerHTML = " Y1: ";
+            document.body.appendChild(b1b);
+            document.body.appendChild(br);
+            document.body.appendChild(tx2);
+            document.getElementById("tx2").innerHTML = "X2: ";
+            document.body.appendChild(b2);
+            document.body.appendChild(ty2);
+            document.getElementById("ty2").innerHTML = " Y2: ";
+            document.body.appendChild(b2b);
+            document.body.appendChild(br1);
+            document.body.appendChild(tx3);
+            document.getElementById("tx3").innerHTML = "X3: ";
+            document.body.appendChild(b3);
+            document.body.appendChild(ty3);
+            document.getElementById('ty3').innerHTML = " Y3: ";
+            document.body.appendChild(b3b);
+            //^ ADDING ELEMENTS
+            //v SOLVE/EQUATION BUTTONS/BR
+            document.body.appendChild(fbr);
+            document.body.appendChild(solve);
+            document.body.appendChild(equ);
+            equ.innerHTML = "Get Equation";
+            solve.innerHTML = "Solve";
+            //BELOW THIS SHOULD NOT BE CHANGED
+            document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues if you switch type of calculation.";
             //BELOW THIS SHOULD NOT BE CHANGED
         } else if(document.getElementById("math-type").value == "distance") {
-            //br = BR in HTML
-            //t1 = First of line of text
-            //t1b = First of line of text B
-            //b2b = Box 2 B
-            //b2 = Box 2
             document.body.appendChild(tx1);
             document.getElementById("tx1").innerHTML = "X1: ";
             document.body.appendChild(b1);
@@ -97,15 +147,65 @@ document.getElementById("submit").onclick = function () {
     };
 
     function equ () {
-        if(document.getElementById("math-type").value == "peremeter") {
-
+        if(document.getElementById("math-type").value == "peremeter3") {
+            alert("Instead of just 'x', use the x value of the second point. Like LINE AB. The x of B = x₂, etc. Do √((x₂ - x₁)² + (y₂ - y₁)²) three times. For each thing. Eg. Line AB, Line BC, Line AC. (Press 'Ok' to continue)");
+            alert("Add all of the units together to find the peremeter. AB + BC + AC. Divide by two and round to the hundreths place. 0.01 eg. That is the semiperemeter or 's'. √(s(s-AB)(s-BC)(s-AC)) would be your answer.");
         } else if (document.getElementById("math-type").value == "distance") {
             alert("√((x₂ - x₁)² + (y₂ - y₁)²)");
         }
     }
     function solve () {
-        if(document.getElementById("math-type").value == "peremeter") {
-
+        if(document.getElementById("math-type").value == "peremeter3") {
+            sx1 = Number(document.getElementById("b1").value);
+            sy1 = Number(document.getElementById("b1b").value);
+            sx2 = Number(document.getElementById("b2").value);
+            sy2 = Number(document.getElementById("b2b").value);
+            sx3 = Number(document.getElementById("b3").value);
+            sy3 = Number(document.getElementById("b3b").value);
+            sx1 = Number(document.getElementById("b1").value);
+            sy1 = Number(document.getElementById("b1b").value);
+            sx2 = Number(document.getElementById("b2").value);
+            sy2 = Number(document.getElementById("b2b").value);
+            sx = sx2 - sx1;
+            console.log(sx);
+            sy = sy2 - sy1;
+            console.log(sy);
+            sxq = sx ** 2;
+            syq = sy ** 2;
+            dis = sxq + syq;
+            ans = Math.sqrt(dis);
+            dis = dist * 100;
+            dis = Math.round(dis);
+            dis = dis/100;
+            sx1 = sx2 - sx1;
+            console.log(sx1);
+            sy1 = sy2 - sy1;
+            console.log(sy);
+            sxq1 = sx1 ** 2;
+            syq1 = sy1 ** 2;
+            dis1 = sxq1 + syq1;
+            dis1 = dist1 * 100;
+            dis1 = Math.round(dis1);
+            dis1 = dis1/100
+            ans1 = Math.sqrt(dis1);
+            sx2 = sx2 - sx1;
+            console.log(sx2);
+            sy2 = sy2 - sy1;
+            console.log(sy2);
+            sxq2 = sx2 ** 2;
+            syq2 = sy2 ** 2;
+            dis2 = sxq2 + syq2;
+            ans2 = Math.sqrt(dis2);
+            dis2 = dist2 * 100;
+            dis2 = Math.round(dis2);
+            dis2 = dis2/100
+            p = ans1 + ans2 + ans;
+            s = p/2;
+            answer = Math.sqrt(s*(s-ans)*(s-ans1)*(s-ans2));
+            answer = answer * 100;
+            answer = Math.round(answer);
+            answer = answer/100;
+            alert(answer + " units².")
         } else if(document.getElementById("math-type").value == "distance") {
             sx1 = Number(document.getElementById("b1").value);
             sy1 = Number(document.getElementById("b1b").value);
