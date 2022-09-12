@@ -5,6 +5,7 @@ document.getElementById("submit").onclick = function () {
     var br1 = document.createElement('br');
     var br2 = document.createElement('br');
     var fbr = document.createElement("BR");
+    var note = document.createElement('text');
     var tx1 = document.createElement("text"); //Tx1 / X1
     var ty1 = document.createElement("text"); //Ty1 / Y1
     var tx2 = document.createElement("text");
@@ -23,6 +24,9 @@ document.getElementById("submit").onclick = function () {
     var b4b = document.createElement('input');
     var solve = document.createElement("button");
     var equ = document.createElement("button");
+    //Note (A note that popup stating a notice, not the REFRESH one) ID
+    note.setAttribute('style', 'text');
+    note.setAttribute('id', 'note');
     //solve ID + STYLE + FUNCTION
     solve.setAttribute("style", "text");
     solve.setAttribute("id", "solve");
@@ -122,7 +126,20 @@ document.getElementById("submit").onclick = function () {
             //BELOW THIS SHOULD NOT BE CHANGED
             document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues if you switch type of calculation.";
             //BELOW THIS SHOULD NOT BE CHANGED
-        } else if(document.getElementById("math-type").value == "distance") {
+/*COC*/     } else if(document.getElementById("math-type").value =="CoC") {
+            document.body.appendChild(note);
+            document.getElementById('note').innerHTML = "Diameter or Radius needs to be filled, leaving blank assumes it is empty and thus 0 (and will be filtered out)."
+            document.body.appendChild(tx1);
+            document.getElementById("tx1").innerHTML = "Diameter: "
+            document.body.appendChild(b1);
+            document.body.appendChild(br);
+            document.body.appendChild(tx2);
+            document.getElementById("tx2").innerHTML = "Radius: "
+            document.body.appendChild(b2);
+
+/*AoC*/     } else if(document.getElementById("math-type").value == "AOC") {
+
+/*distance*/} else if(document.getElementById("math-type").value == "distance") {
             document.body.appendChild(tx1);
             document.getElementById("tx1").innerHTML = "X1: ";
             document.body.appendChild(b1);
@@ -148,8 +165,10 @@ document.getElementById("submit").onclick = function () {
 
     function equ () {
         if(document.getElementById("math-type").value == "AoT") {
-            alert("Instead of just 'x', use the x value of the second point. Like LINE AB. The x of B = x₂, etc. Do √((x₂ - x₁)² + (y₂ - y₁)²) three times. For each thing. Eg. Line AB, Line BC, Line AC. (Press 'Ok' to continue)");
-            alert("Add all of the units together to find the peremeter. AB + BC + AC. Divide by two and round to the hundreths place. 0.01 eg. That is the semiperemeter or 's'. √(s(s-AB)(s-BC)(s-AC)) would be your answer.");
+            alert('nstead of just "x", use the x value of the second point. Like LINE AB. The x of B = x₂, etc. Do √((x₂ - x₁)² + (y₂ - y₁)²) three times. For each thing. Eg. Line AB, Line BC, Line AC. (Press "Ok" to continue)');
+            alert('Add all of the units together to find the peremeter. AB + BC + AC. Divide by two and round to the hundreths place. 0.01 eg. That is the semiperemeter or "s". √(s(s-AB)(s-BC)(s-AC)) would be your answer.');
+        } else if(document.getElementById("math-type").value == "CoC") {
+            alert('"C = πd" or "C = π(2d)"');
         } else if (document.getElementById("math-type").value == "distance") {
             alert("√((x₂ - x₁)² + (y₂ - y₁)²)");
         }
@@ -206,6 +225,15 @@ document.getElementById("submit").onclick = function () {
             answer = Math.round(answer);
             answer = answer/100;
             alert(answer + " units².")
+        } else if(document.getElementById("math-type").value == "CoC") {
+            d = Number(document.getElementById("b1").value);
+            r = Number(document.getElementById("b2").value);
+            if (r == 0) {
+                r = d/2;
+            }
+            ans = 3.14 * 2 * r;
+            alert(ans + " is your answer.");
+
         } else if(document.getElementById("math-type").value == "distance") {
             sx1 = Number(document.getElementById("b1").value);
             sy1 = Number(document.getElementById("b1b").value);
