@@ -91,7 +91,7 @@ document.getElementById("submit").onclick = function () {
     //^ HTML ELEMENTS
     //space
     ///// V ONCLICK
-        if(document.getElementById("math-type").value == "peremeter3"){
+        if(document.getElementById("math-type").value == "AoT"){
             document.body.appendChild(tx1);
             document.getElementById("tx1").innerHTML = "X1: ";
             document.body.appendChild(b1);
@@ -147,7 +147,7 @@ document.getElementById("submit").onclick = function () {
     };
 
     function equ () {
-        if(document.getElementById("math-type").value == "peremeter3") {
+        if(document.getElementById("math-type").value == "AoT") {
             alert("Instead of just 'x', use the x value of the second point. Like LINE AB. The x of B = x₂, etc. Do √((x₂ - x₁)² + (y₂ - y₁)²) three times. For each thing. Eg. Line AB, Line BC, Line AC. (Press 'Ok' to continue)");
             alert("Add all of the units together to find the peremeter. AB + BC + AC. Divide by two and round to the hundreths place. 0.01 eg. That is the semiperemeter or 's'. √(s(s-AB)(s-BC)(s-AC)) would be your answer.");
         } else if (document.getElementById("math-type").value == "distance") {
@@ -155,7 +155,7 @@ document.getElementById("submit").onclick = function () {
         }
     }
     function solve () {
-        if(document.getElementById("math-type").value == "peremeter3") {
+        if(document.getElementById("math-type").value == "AoT") {
             sx1 = Number(document.getElementById("b1").value);
             sy1 = Number(document.getElementById("b1b").value);
             sx2 = Number(document.getElementById("b2").value);
