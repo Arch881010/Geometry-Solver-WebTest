@@ -1,9 +1,29 @@
+/* x = 0 to prevent issue */ x = 0;
 //v ONCLICK
 document.getElementById("submit").onclick = function () {
+    //REMOVES ALL 
+    if (x == 1) {
+        document.body.removeChild(document.getElementById('tx1'));
+        document.body.removeChild(document.getElementById('ty1'));
+        document.body.removeChild(document.getElementById('tx2'));
+        document.body.removeChild(document.getElementById('ty2'));
+        document.body.removeChild(document.getElementById('tx3'));
+        document.body.removeChild(document.getElementById('ty3'));
+        document.body.removeChild(document.getElementById('b1'));
+        document.body.removeChild(document.getElementById('b1b'));
+        document.body.removeChild(document.getElementById('b2'));
+        document.body.removeChild(document.getElementById('b2b'));
+        document.body.removeChild(document.getElementById('b3'));
+        document.body.removeChild(document.getElementById('b3b'));
+
+    } else {
+        
+    }
     // SPACE
     var br = document.createElement("BR");   //BR 
     var br1 = document.createElement('BR');
     var br2 = document.createElement('BR');
+    var br3 = document.createElement("BR");
     var fbr = document.createElement("BR");
     var note = document.createElement('text');
     var tx1 = document.createElement("text"); //Tx1 / X1
@@ -124,6 +144,7 @@ document.getElementById("submit").onclick = function () {
             equ.innerHTML = "Get Equation";
             solve.innerHTML = "Solve";
             //BELOW THIS SHOULD NOT BE CHANGED
+            x = 1;
             document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues if you switch type of calculation.";
 /*COC*/     } else if(document.getElementById("math-type").value =="CoC") {
             document.body.appendChild(note);
@@ -135,8 +156,13 @@ document.getElementById("submit").onclick = function () {
             document.body.appendChild(br);         
             document.body.appendChild(tx2);
             document.getElementById("tx2").innerHTML = `&nbsp&nbsp Radius: `
-            document.getElementById("tx2").style.fontSize = "medium";
             document.body.appendChild(b2);
+            document.body.appendChild(br3);
+            document.body.appendChild(solve);
+            document.body.appendChild(equ);
+            equ.innerHTML = "Get Equation";
+            solve.innerHTML = "Solve";
+            x = 2;
 /*AoC*/     } else if(document.getElementById("math-type").value == "AOC") {
 
 /*distance*/} else if(document.getElementById("math-type").value == "distance") {
@@ -160,12 +186,13 @@ document.getElementById("submit").onclick = function () {
             solve.innerHTML = "Solve";
             //BELOW THIS SHOULD NOT BE CHANGED
             document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues if you switch type of calculation.";
+            x = 3;
             }
     };
 
     function equ () {
         if(document.getElementById("math-type").value == "AoT") {
-            alert('nstead of just "x", use the x value of the second point. Like LINE AB. The x of B = x₂, etc. Do √((x₂ - x₁)² + (y₂ - y₁)²) three times. For each thing. Eg. Line AB, Line BC, Line AC. (Press "Ok" to continue)');
+            alert('Instead of just "x", use the x value of the second point. Like LINE AB. The x of B = x₂, etc. Do √((x₂ - x₁)² + (y₂ - y₁)²) three times. For each thing. Eg. Line AB, Line BC, Line AC. (Press "Ok" to continue)');
             alert('Add all of the units together to find the peremeter. AB + BC + AC. Divide by two and round to the hundreths place. 0.01 eg. That is the semiperemeter or "s". √(s(s-AB)(s-BC)(s-AC)) would be your answer.');
         } else if(document.getElementById("math-type").value == "CoC") {
             alert('"C = πd" or "C = π(2d)"');
@@ -225,6 +252,7 @@ document.getElementById("submit").onclick = function () {
             answer = Math.round(answer);
             answer = answer/100;
             alert(answer + " units².")
+            x = 1;
         } else if(document.getElementById("math-type").value == "CoC") {
             d = Number(document.getElementById("b1").value);
             r = Number(document.getElementById("b2").value);
@@ -233,7 +261,7 @@ document.getElementById("submit").onclick = function () {
             }
             ans = 3.14 * 2 * r;
             alert(ans + " is your answer.");
-
+            x = 2;
         } else if(document.getElementById("math-type").value == "distance") {
             sx1 = Number(document.getElementById("b1").value);
             sy1 = Number(document.getElementById("b1b").value);
@@ -248,5 +276,6 @@ document.getElementById("submit").onclick = function () {
             dis = sxq + syq;
             ans = Math.sqrt(dis);
             alert(ans + " units."); 
+            x = 3;
         }
     }
