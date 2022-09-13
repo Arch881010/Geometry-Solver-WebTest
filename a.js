@@ -2,8 +2,8 @@
 document.getElementById("submit").onclick = function () {
     // SPACE
     var br = document.createElement("BR");   //BR 
-    var br1 = document.createElement('br');
-    var br2 = document.createElement('br');
+    var br1 = document.createElement('BR');
+    var br2 = document.createElement('BR');
     var fbr = document.createElement("BR");
     var note = document.createElement('text');
     var tx1 = document.createElement("text"); //Tx1 / X1
@@ -34,7 +34,7 @@ document.getElementById("submit").onclick = function () {
     //equ ID + STYLE + FUNCTION
     equ.setAttribute("style", "style");
     equ.setAttribute('id', "equ");
-    equ.setAttribute("onclick", "equ()")
+    equ.setAttribute("onclick", "equ()");
     //Tx1 ID + STYLE
     tx1.setAttribute("stye", "text");
     tx1.setAttribute("id", "tx1");
@@ -69,7 +69,7 @@ document.getElementById("submit").onclick = function () {
     tx4.setAttribute("style", "text");
     tx4.setAttribute("id", 'tx4');
     //ty4
-    ty4.setAttribute('style', 'text')
+    ty4.setAttribute('style', 'text');
     ty4.setAttribute('id', 'ty4');
     //B3 ID + STYLE   
     b3.setAttribute("style", "text");
@@ -125,18 +125,18 @@ document.getElementById("submit").onclick = function () {
             solve.innerHTML = "Solve";
             //BELOW THIS SHOULD NOT BE CHANGED
             document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues if you switch type of calculation.";
-            //BELOW THIS SHOULD NOT BE CHANGED
 /*COC*/     } else if(document.getElementById("math-type").value =="CoC") {
             document.body.appendChild(note);
-            document.getElementById('note').innerHTML = "Diameter or Radius needs to be filled, leaving blank assumes it is empty and thus 0 (and will be filtered out)."
+            document.getElementById('note').innerHTML = "Diameter or Radius needs to be filled, leaving blank assumes it is empty and thus 0 (and will be filtered out).";
+            document.body.appendChild(br1);
             document.body.appendChild(tx1);
             document.getElementById("tx1").innerHTML = "Diameter: "
             document.body.appendChild(b1);
-            document.body.appendChild(br);
+            document.body.appendChild(br);         
+            tx2.style.width = '13';
             document.body.appendChild(tx2);
-            document.getElementById("tx2").innerHTML = "Radius: "
+            document.getElementById("tx2").innerHTML = `&nbsp&nbsp Radius: `
             document.body.appendChild(b2);
-
 /*AoC*/     } else if(document.getElementById("math-type").value == "AOC") {
 
 /*distance*/} else if(document.getElementById("math-type").value == "distance") {
