@@ -133,9 +133,9 @@ document.getElementById("submit").onclick = function () {
             document.getElementById("tx1").innerHTML = "Diameter: "
             document.body.appendChild(b1);
             document.body.appendChild(br);         
-            tx2.style.width = '13';
             document.body.appendChild(tx2);
             document.getElementById("tx2").innerHTML = `&nbsp&nbsp Radius: `
+            document.getElementById("tx2").style.fontSize = "medium";
             document.body.appendChild(b2);
 /*AoC*/     } else if(document.getElementById("math-type").value == "AOC") {
 
