@@ -1,16 +1,10 @@
 /* x = 0 to prevent issue */ x = 0;
 //v ONCLICK
-function sleep(milliseconds) {
-    const date = Date.now();
-    let currentDate = null;
-    do {
-      currentDate = Date.now();
-    } while (currentDate - date < milliseconds);
-  }
+/* Note1's text*/ var Note = "Diameter or Radius needs to be filled, leaving blank assumes it is empty and thus 0 (and will be filtered out).";
 a = 0;
 document.getElementById("submit").onclick = function () {
     //RELOADS ALL 
-    if (x == 1 || x == 2 || x == 3) {
+    if (x == 1 || x == 2 || x == 3 || x == true) {
     document.location.reload();
     a = 4;
     } else {}
@@ -114,7 +108,7 @@ document.getElementById("submit").onclick = function () {
     br2.setAttribute('class', 'br');
     br3.setAttribute('class', 'br');
     fbr.setAttribute('class', 'br');
-    }
+    } else {}
     //^ HTML ELEMENTS
     //space
     ///// V ONCLICK
@@ -151,7 +145,7 @@ document.getElementById("submit").onclick = function () {
             document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues if you switch type of calculation.";
 /*COC*/     } else if(document.getElementById("math-type").value =="CoC") {
             document.body.appendChild(note);
-            document.getElementById('note').innerHTML = "Diameter or Radius needs to be filled, leaving blank assumes it is empty and thus 0 (and will be filtered out).";
+            document.getElementById('note').innerHTML = Note;
             document.body.appendChild(br1);
             document.body.appendChild(tx1);
             document.getElementById("tx1").innerHTML = "Diameter: "
@@ -167,7 +161,11 @@ document.getElementById("submit").onclick = function () {
             solve.innerHTML = "Solve";
             x = 2;
 /*AoC*/     } else if(document.getElementById("math-type").value == "AOC") {
-
+            document.body.appendChild(note);
+            document.getElementById('note').innerHTML = Note;
+            document.body.appendChild(tx1);
+            document.getElementById('note').innerHTML.value == "Distance: ";
+            x = true;
 /*distance*/} else if(document.getElementById("math-type").value == "distance") {
             document.body.appendChild(tx1);
             document.getElementById("tx1").innerHTML = "X1: ";
