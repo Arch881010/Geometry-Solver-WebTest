@@ -1,24 +1,10 @@
 /* x = 0 to prevent issue */ x = 0;
 //v ONCLICK
 document.getElementById("submit").onclick = function () {
-    //REMOVES ALL 
-    if (x == 1) {
-        document.body.removeChild(document.getElementById('tx1'));
-        document.body.removeChild(document.getElementById('ty1'));
-        document.body.removeChild(document.getElementById('tx2'));
-        document.body.removeChild(document.getElementById('ty2'));
-        document.body.removeChild(document.getElementById('tx3'));
-        document.body.removeChild(document.getElementById('ty3'));
-        document.body.removeChild(document.getElementById('b1'));
-        document.body.removeChild(document.getElementById('b1b'));
-        document.body.removeChild(document.getElementById('b2'));
-        document.body.removeChild(document.getElementById('b2b'));
-        document.body.removeChild(document.getElementById('b3'));
-        document.body.removeChild(document.getElementById('b3b'));
-
-    } else {
-        
-    }
+    //RELOADS ALL 
+    if (x == 1 || x == 2 || x == 3) {
+    document.location.reload();
+    } else {}
     // SPACE
     var br = document.createElement("BR");   //BR 
     var br1 = document.createElement('BR');
@@ -112,6 +98,13 @@ document.getElementById("submit").onclick = function () {
     b3b.setAttribute("type", "number");
     b4.setAttribute("type", "number");
     b4b.setAttribute("type", "number");
+    //BR Class setting
+    br.setAttribute("class", 'br');
+    br1.setAttribute('class', 'br');
+    br2.setAttribute('class', 'br');
+    br3.setAttribute('class', 'br');
+    fbr.setAttribute('class', 'br');
+    
     //^ HTML ELEMENTS
     //space
     ///// V ONCLICK
