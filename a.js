@@ -50,7 +50,7 @@ document.getElementById("submit").onclick = function () {
     equ.setAttribute('id', "equ");
     equ.setAttribute("onclick", "equ()");
     //T1 ID + STYLE
-    t1.setAttribute("id", "b1");
+    t1.setAttribute("id", "t1");
     t1.setAttribute("style", "text");
     //Tx1 ID + STYLE
     tx1.setAttribute("stye", "text");
@@ -65,7 +65,7 @@ document.getElementById("submit").onclick = function () {
     ty1.setAttribute("stye", "text");
     ty1.setAttribute("id", "ty1");
     //T2 ID + STYLE
-    t2.setAttribute("id", "b1");
+    t2.setAttribute("id", "t2");
     t2.setAttribute("style", "text");
     //B2 ID + STYLE
     b2.setAttribute("style", "text");
@@ -104,8 +104,10 @@ document.getElementById("submit").onclick = function () {
     b4b.setAttribute('style', 'text');
     b4b.setAttribute('id', 'b4b');
     //SETS BOXES AS NUMBERS
+    t1.setAttribute("type", 'number');
     b1.setAttribute("type", "number");
     b1b.setAttribute("type", "number");
+    t2.setAttribute('type', 'number');
     b2.setAttribute("type", "number");
     b2b.setAttribute("type", "number");
     b3.setAttribute("type", "number");
@@ -177,16 +179,16 @@ document.getElementById("submit").onclick = function () {
             x = 2;
 
 
-/*AoC*/     } else if(document.getElementById("math-type").value == "AOC") {
+/*AoC*/     } else if(document.getElementById("math-type").value == "AoC") {
             document.body.appendChild(note);
             document.getElementById('note').innerHTML = Note;
             document.body.appendChild(br);
             document.body.appendChild(tx1);
-            document.getElementById('tx1').innerHTML.value == dt;
-            document.body.appendChild(t1)
+            document.getElementById('tx1').innerHTML = dt;
+            document.body.appendChild(t1);
             document.body.appendChild(br1);
             document.body.appendChild(tx2);
-            document.getElementById('tx2').innerHTML.value == rt;
+            document.getElementById('tx2').innerHTML = rt;
             document.body.appendChild(t2);
             document.body.appendChild(br3);
             document.body.appendChild(equ);
@@ -322,8 +324,8 @@ document.getElementById("submit").onclick = function () {
             alert(ans + " units is your answer."); 
             x = 3;
         } else if(document.getElementById("math-type").value == "AoC") {
-            var r = Number(document.getElementById("b1").value);
-            var d = Number(document.getElementById("b2").value);
+            var r = Number(document.getElementById("t1").value);
+            var d = Number(document.getElementById("t2").value);
             if (d == 0) {}
             if(r == 0) {
             r = d/2;
