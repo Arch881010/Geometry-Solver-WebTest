@@ -1,6 +1,8 @@
 /* x = 0 to prevent issue */ x = 0;
 //v ONCLICK
 /* Note1's text*/ var Note = "Diameter or Radius needs to be filled, leaving blank assumes it is empty and thus 0 (and will be filtered out).";
+/*TX1's text*/ var rt = `&nbsp&nbspRadius: `;
+/*TX2's text*/ var dt = "Diameter: "; 
 a = 0;
 document.getElementById("submit").onclick = function () {
     //RELOADS ALL 
@@ -32,6 +34,8 @@ document.getElementById("submit").onclick = function () {
     var b3b = document.createElement("input");
     var b4 = document.createElement('input');
     var b4b = document.createElement('input');
+    var t1 = document.createElement('input');
+    var t2 = document.createElement('input');
     var solve = document.createElement("button");
     var equ = document.createElement("button");
     //Note (A note that popup stating a notice, not the REFRESH one) ID
@@ -45,6 +49,9 @@ document.getElementById("submit").onclick = function () {
     equ.setAttribute("style", "style");
     equ.setAttribute('id', "equ");
     equ.setAttribute("onclick", "equ()");
+    //T1 ID + STYLE
+    t1.setAttribute("id", "b1");
+    t1.setAttribute("style", "text");
     //Tx1 ID + STYLE
     tx1.setAttribute("stye", "text");
     tx1.setAttribute("id", "tx1");
@@ -57,6 +64,9 @@ document.getElementById("submit").onclick = function () {
     //Ty1 ID + STYLE
     ty1.setAttribute("stye", "text");
     ty1.setAttribute("id", "ty1");
+    //T2 ID + STYLE
+    t2.setAttribute("id", "b1");
+    t2.setAttribute("style", "text");
     //B2 ID + STYLE
     b2.setAttribute("style", "text");
     b2.setAttribute("id", "b2");
@@ -110,7 +120,10 @@ document.getElementById("submit").onclick = function () {
     fbr.setAttribute('class', 'br');
     } else {}
     //^ HTML ELEMENTS
-    //space
+
+
+
+
     ///// V ONCLICK
         if(document.getElementById("math-type").value == "AoT"){
             document.body.appendChild(tx1);
@@ -143,16 +156,18 @@ document.getElementById("submit").onclick = function () {
             //BELOW THIS SHOULD NOT BE CHANGED
             x = 1;
             document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues if you switch type of calculation.";
+            
+
 /*COC*/     } else if(document.getElementById("math-type").value =="CoC") {
             document.body.appendChild(note);
             document.getElementById('note').innerHTML = Note;
             document.body.appendChild(br1);
             document.body.appendChild(tx1);
-            document.getElementById("tx1").innerHTML = "Diameter: "
+            document.getElementById("tx1").innerHTML = dt;
             document.body.appendChild(b1);
             document.body.appendChild(br);         
             document.body.appendChild(tx2);
-            document.getElementById("tx2").innerHTML = `&nbsp&nbsp Radius: `
+            document.getElementById("tx2").innerHTML = rt;
             document.body.appendChild(b2);
             document.body.appendChild(br3);
             document.body.appendChild(solve);
@@ -160,12 +175,27 @@ document.getElementById("submit").onclick = function () {
             equ.innerHTML = "Get Equation";
             solve.innerHTML = "Solve";
             x = 2;
+
+
 /*AoC*/     } else if(document.getElementById("math-type").value == "AOC") {
             document.body.appendChild(note);
             document.getElementById('note').innerHTML = Note;
+            document.body.appendChild(br);
             document.body.appendChild(tx1);
-            document.getElementById('note').innerHTML.value == "Distance: ";
+            document.getElementById('tx1').innerHTML.value == dt;
+            document.body.appendChild(t1)
+            document.body.appendChild(br1);
+            document.body.appendChild(tx2);
+            document.getElementById('tx2').innerHTML.value == rt;
+            document.body.appendChild(t2);
+            document.body.appendChild(br3);
+            document.body.appendChild(equ);
+            document.body.appendChild(solve);
+            equ.innerHTML = "Get Equation";
+            solve.innerHTML = "Solve";
             x = true;
+
+
 /*distance*/} else if(document.getElementById("math-type").value == "distance") {
             document.body.appendChild(tx1);
             document.getElementById("tx1").innerHTML = "X1: ";
@@ -191,6 +221,10 @@ document.getElementById("submit").onclick = function () {
             }
     };
 
+
+
+
+
     function equ () {
         if(document.getElementById("math-type").value == "AoT") {
             alert('Instead of just "x", use the x value of the second point. Like LINE AB. The x of B = x₂, etc. Do √((x₂ - x₁)² + (y₂ - y₁)²) three times. For each thing. Eg. Line AB, Line BC, Line AC. (Press "Ok" to continue)');
@@ -199,8 +233,17 @@ document.getElementById("submit").onclick = function () {
             alert('"C = πd" or "C = π(2d)"');
         } else if (document.getElementById("math-type").value == "distance") {
             alert("√((x₂ - x₁)² + (y₂ - y₁)²)");
+        } else if(document.getElementById("math-type").value == "AoC") {
+            alert("π(r²)");
         }
     }
+
+
+
+
+
+
+
     function solve () {
         if(document.getElementById("math-type").value == "AoT") {
             sx1 = Number(document.getElementById("b1").value);
@@ -278,5 +321,14 @@ document.getElementById("submit").onclick = function () {
             ans = Math.sqrt(dis);
             alert(ans + " units."); 
             x = 3;
+        } else if(document.getElementById("math-type").value == "AoC") {
+            var r = Number(document.getElementById("b1").value);
+            var d = Number(document.getElementById("b2").value);
+            if (d == 0) {}
+            if(r == 0) {
+            r = d/2;
+            }
+            var ans = 3.14*(r**2);
+            alert(ans);
         }
     }
