@@ -295,7 +295,7 @@ document.getElementById("submit").onclick = function () {
             answer = answer * 100;
             answer = Math.round(answer);
             answer = answer/100;
-            alert(answer + " units².")
+            alert(answer + " units² is your answer.")
             x = 1;
         } else if(document.getElementById("math-type").value == "CoC") {
             d = Number(document.getElementById("b1").value);
@@ -304,7 +304,7 @@ document.getElementById("submit").onclick = function () {
                 r = d/2;
             }
             ans = 3.14 * 2 * r;
-            alert(ans + " is your answer.");
+            alert(ans + " units is your answer.");
             x = 2;
         } else if(document.getElementById("math-type").value == "distance") {
             sx1 = Number(document.getElementById("b1").value);
@@ -319,7 +319,7 @@ document.getElementById("submit").onclick = function () {
             syq = sy ** 2;
             dis = sxq + syq;
             ans = Math.sqrt(dis);
-            alert(ans + " units."); 
+            alert(ans + " units is your answer."); 
             x = 3;
         } else if(document.getElementById("math-type").value == "AoC") {
             var r = Number(document.getElementById("b1").value);
@@ -329,6 +329,6 @@ document.getElementById("submit").onclick = function () {
             r = d/2;
             }
             var ans = 3.14*(r**2);
-            alert(ans);
+            alert(ans + " units is your answer.");
         }
     }
