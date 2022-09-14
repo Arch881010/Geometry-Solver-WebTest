@@ -1,11 +1,21 @@
 /* x = 0 to prevent issue */ x = 0;
 //v ONCLICK
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
+a = 0;
 document.getElementById("submit").onclick = function () {
     //RELOADS ALL 
     if (x == 1 || x == 2 || x == 3) {
     document.location.reload();
+    a = 4;
     } else {}
     // SPACE
+    if (a === 0) {
     var br = document.createElement("BR");   //BR 
     var br1 = document.createElement('BR');
     var br2 = document.createElement('BR');
@@ -104,7 +114,7 @@ document.getElementById("submit").onclick = function () {
     br2.setAttribute('class', 'br');
     br3.setAttribute('class', 'br');
     fbr.setAttribute('class', 'br');
-    
+    }
     //^ HTML ELEMENTS
     //space
     ///// V ONCLICK
