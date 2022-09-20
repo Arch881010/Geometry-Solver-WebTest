@@ -1,20 +1,38 @@
 /* x = 0 to prevent issue */ x = 0;
+/* Sets DIV */    const div = document.getElementById('div');
 //v ONCLICK
 /* Note1's text*/ var Note = "Diameter or Radius needs to be filled, leaving blank assumes it is empty and thus 0 (and will be filtered out).";
 /*TX1's text*/ var rt = `&nbsp&nbspRadius: `;
 /*TX2's text*/ var dt = "Diameter: ";
 a = 0;
 document.getElementById("submit").onclick = function () {
-    //RELOADS ALL 
-    if (x == 1 || x == 2 || x == 3 || x == 4 || x == 5 || x == 6 || x == 7|| x == 8|| x == 9|| x == 10 || x === true) {
-        document.location.reload();
-        a = 4;
+    //Removes Input Boxes, etc
+    if (x == 1) {
+    div.remove();
+    div.setAttribute("id", 'div');
+    document.body.appendChild(div);
+    } else if(x == 2) {
+
+    } else if(x == 3) {
+
+    } else if (x == 4) {
+
+    } else if(x == 5) {
+
+    } else if(x == 6) {
+
+    } else if(x == 7) {
+
+    } else if(x == 8) {
+
+    } else if(x == 9) {
+
+    } else if(x == 10) {
+
     } else {}
     // SPACE
     if (a === 0) {
         var mathtype = document.getElementById('math-type').value;
-        document.getElementById('submit').innerHTML = "Refresh";
-        document.getElementById('math-type').remove();
         var br = document.createElement("BR");   //BR 
         var br1 = document.createElement('BR');
         var br2 = document.createElement('BR');
@@ -131,31 +149,32 @@ document.getElementById("submit").onclick = function () {
 
     ///// V ONCLICK
     if (document.getElementById("math-type").value == "AoT") {
-        document.body.appendChild(tx1);
+        div.appendChild(tx1);
         document.getElementById("tx1").innerHTML = "X1: ";
-        document.body.appendChild(b1);
-        document.body.appendChild(ty1);
+        div.appendChild(b1);
+        div.appendChild(ty1);
         document.getElementById("ty1").innerHTML = " Y1: ";
-        document.body.appendChild(b1b);
-        document.body.appendChild(br);
-        document.body.appendChild(tx2);
+        div.appendChild(b1b);
+        div.appendChild(br);
+        div.appendChild(tx2);
         document.getElementById("tx2").innerHTML = "X2: ";
-        document.body.appendChild(b2);
-        document.body.appendChild(ty2);
+        div.appendChild(b2);
+        div.appendChild(ty2);
         document.getElementById("ty2").innerHTML = " Y2: ";
-        document.body.appendChild(b2b);
-        document.body.appendChild(br1);
-        document.body.appendChild(tx3);
+        div.appendChild(b2b);
+        div.appendChild(br1);
+        div.appendChild(tx3);
         document.getElementById("tx3").innerHTML = "X3: ";
-        document.body.appendChild(b3);
-        document.body.appendChild(ty3);
+        div.appendChild(b3);
+        div.appendChild(ty3);
         document.getElementById('ty3').innerHTML = " Y3: ";
-        document.body.appendChild(b3b);
+        div.appendChild(b3b);
+        //tx1, b1, ty1, b1b, br, tx2, b2, ty2, b2b, br1, tx3, b3, ty3, b3b
         //^ ADDING ELEMENTS
         //v SOLVE/EQUATION BUTTONS/BR
-        document.body.appendChild(fbr);
-        document.body.appendChild(solve);
-        document.body.appendChild(equ);
+        div.appendChild(fbr);
+        div.appendChild(solve);
+        div.appendChild(equ);
         equ.innerHTML = "Get Equation";
         solve.innerHTML = "Solve";
         //BELOW THIS SHOULD NOT BE CHANGED
