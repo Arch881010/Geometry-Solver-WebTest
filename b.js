@@ -7,28 +7,8 @@
 a = 0;
 document.getElementById("submit").onclick = function () {
     //Removes Input Boxes, etc
-    if (x == 1) {
-    div.remove();
-    div.setAttribute("id", 'div');
-    document.body.appendChild(div);
-    } else if(x == 2) {
-
-    } else if(x == 3) {
-
-    } else if (x == 4) {
-
-    } else if(x == 5) {
-
-    } else if(x == 6) {
-
-    } else if(x == 7) {
-
-    } else if(x == 8) {
-
-    } else if(x == 9) {
-
-    } else if(x == 10) {
-
+    if (x > 0) {
+    div.replaceChildren();
     } else {}
     // SPACE
     if (a === 0) {
@@ -184,19 +164,19 @@ document.getElementById("submit").onclick = function () {
 
         /*COC*/
     } else if (document.getElementById("math-type").value == "CoC") {
-        document.body.appendChild(note);
+        div.appendChild(note);
         document.getElementById('note').innerHTML = Note;
-        document.body.appendChild(br1);
-        document.body.appendChild(tx1);
+        div.appendChild(br1);
+        div.appendChild(tx1);
         document.getElementById("tx1").innerHTML = dt;
-        document.body.appendChild(b1);
-        document.body.appendChild(br);
-        document.body.appendChild(tx2);
+        div.appendChild(b1);
+        div.appendChild(br);
+        div.appendChild(tx2);
         document.getElementById("tx2").innerHTML = rt;
-        document.body.appendChild(b2);
-        document.body.appendChild(br3);
-        document.body.appendChild(solve);
-        document.body.appendChild(equ);
+        div.appendChild(b2);
+        div.appendChild(br3);
+        div.appendChild(solve);
+        div.appendChild(equ);
         equ.innerHTML = "Get Equation";
         solve.innerHTML = "Solve";
         x = 2;
@@ -204,19 +184,19 @@ document.getElementById("submit").onclick = function () {
 
         /*AoC*/
     } else if (document.getElementById("math-type").value == "AoC") {
-        document.body.appendChild(note);
+        div.appendChild(note);
         document.getElementById('note').innerHTML = Note;
-        document.body.appendChild(br);
-        document.body.appendChild(tx1);
+        div.appendChild(br);
+        div.appendChild(tx1);
         document.getElementById('tx1').innerHTML = dt;
-        document.body.appendChild(t1);
-        document.body.appendChild(br1);
-        document.body.appendChild(tx2);
+        div.appendChild(t1);
+        div.appendChild(br1);
+        div.appendChild(tx2);
         document.getElementById('tx2').innerHTML = rt;
-        document.body.appendChild(t2);
-        document.body.appendChild(br3);
-        document.body.appendChild(equ);
-        document.body.appendChild(solve);
+        div.appendChild(t2);
+        div.appendChild(br3);
+        div.appendChild(solve);
+        div.appendChild(equ);
         equ.innerHTML = "Get Equation";
         solve.innerHTML = "Solve";
         x = true;
@@ -224,22 +204,22 @@ document.getElementById("submit").onclick = function () {
 
         /*distance*/
     } else if (document.getElementById("math-type").value == "distance") {
-        document.body.appendChild(tx1);
+        div.appendChild(tx1);
         document.getElementById("tx1").innerHTML = "X1: ";
-        document.body.appendChild(b1);
-        document.body.appendChild(ty1);
+        div.appendChild(b1);
+        div.appendChild(ty1);
         document.getElementById("ty1").innerHTML = " Y1: ";
-        document.body.appendChild(b1b);
-        document.body.appendChild(br);
-        document.body.appendChild(tx2);
+        div.appendChild(b1b);
+        div.appendChild(br);
+        div.appendChild(tx2);
         document.getElementById("tx2").innerHTML = "X2: ";
-        document.body.appendChild(b2);
-        document.body.appendChild(ty2);
+        div.appendChild(b2);
+        div.appendChild(ty2);
         document.getElementById("ty2").innerHTML = " Y2: ";
-        document.body.appendChild(b2b);
-        document.body.appendChild(br1);
-        document.body.appendChild(solve);
-        document.body.appendChild(equ);
+        div.appendChild(b2b);
+        div.appendChild(br1);
+        div.appendChild(solve);
+        div.appendChild(equ);
         equ.innerHTML = "Get Equation";
         solve.innerHTML = "Solve";
         //BELOW THIS SHOULD NOT BE CHANGED
