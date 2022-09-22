@@ -11,7 +11,6 @@ document.getElementById("submit").onclick = function () {
     div.replaceChildren();
     } else {}
     // SPACE
-    if (a === 0) {
         var mathtype = document.getElementById('math-type').value;
         var br = document.createElement("BR");   //BR 
         var br1 = document.createElement('BR');
@@ -121,7 +120,6 @@ document.getElementById("submit").onclick = function () {
         br2.setAttribute('class', 'br');
         br3.setAttribute('class', 'br');
         fbr.setAttribute('class', 'br');
-    } else { }
     //^ HTML ELEMENTS
 
 
