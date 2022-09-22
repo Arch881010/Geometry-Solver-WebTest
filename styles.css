@@ -4,3 +4,27 @@ body {
     color: white;
     font-family: Arial;
 }
+#submit {
+    text-align: center;
+    background-color: rgb(62, 61, 61);
+    color: White;
+    font-family: Arial;
+}
+#equ {
+    text-align: center;
+    background-color: rgb(62, 61, 61);
+    color: White;
+    font-family: Arial;
+}
+#solve {
+    text-align: center;
+    background-color: rgb(62, 61, 61);
+    color: White;
+    font-family: Arial;
+}
+#math-type{
+    text-align: left;
+    background-color: rgb(62, 61, 61);
+    color: White;
+    font-family: Arial; 
+}

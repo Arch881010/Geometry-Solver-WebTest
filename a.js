@@ -11,7 +11,7 @@ document.getElementById("submit").onclick = function () {
     div.replaceChildren();
     } else {}
     // SPACE
-        var mathtype = document.getElementById('math-type').value;
+       var mathtype = document.getElementById('math-type').value;
         var br = document.createElement("BR");   //BR 
         var br1 = document.createElement('BR');
         var br2 = document.createElement('BR');
@@ -121,9 +121,24 @@ document.getElementById("submit").onclick = function () {
         br3.setAttribute('class', 'br');
         fbr.setAttribute('class', 'br');
     //^ HTML ELEMENTS
-
-
-
+    //Color/CSS setting.
+    b1.style.backgroundColor = 'rgb(62, 61, 61)';
+    b1b.style.backgroundColor = 'rgb(62, 61, 61)';
+    b2.style.backgroundColor = 'rgb(62, 61, 61)';
+    b2b.style.backgroundColor = 'rgb(62, 61, 61)';
+    b3.style.backgroundColor = 'rgb(62, 61, 61)';
+    b3b.style.backgroundColor = 'rgb(62, 61, 61)';
+    t1.style.backgroundColor = 'rgb(62, 61, 61)';
+    t2.style.backgroundColor = 'rgb(62, 61, 61)';
+    t1.style.color = 'White';
+    t2.style.color = 'White';
+    b3b.style.color = 'White';
+    b1.style.color = 'White';
+    b1b.style.color = 'White';
+    b2.style.color = 'White';
+    b2b.style.color = 'White';
+    b3.style.color = 'White';
+    b3b.style.color = 'White';
 
     ///// V ONCLICK
     if (document.getElementById("math-type").value == "AoT") {
@@ -153,6 +168,8 @@ document.getElementById("submit").onclick = function () {
         div.appendChild(fbr);
         div.appendChild(solve);
         div.appendChild(equ);
+
+
         equ.innerHTML = "Get Equation";
         solve.innerHTML = "Solve";
         //BELOW THIS SHOULD NOT BE CHANGED
