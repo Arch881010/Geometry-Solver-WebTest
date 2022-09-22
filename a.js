@@ -184,7 +184,7 @@ document.getElementById("submit").onclick = function () {
 
         /*AoC*/
     } else if (document.getElementById("math-type").value == "AoC") {
-        div.appendChild(note);
+        div.appendChild(note); 
         document.getElementById('note').innerHTML = Note;
         div.appendChild(br);
         div.appendChild(tx1);
