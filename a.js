@@ -324,6 +324,9 @@ function solve() {
         syq = sy ** 2;
         dis = sxq + syq;
         ans = Math.sqrt(dis);
+        ans = ans * 100;
+        ans = Math.round(ans);
+        ans = ans/100;
         alert(ans + " units is your answer.");
         x = 3;
     } else if (document.getElementById("math-type").value == "AoC") {
@@ -334,6 +337,9 @@ function solve() {
             r = d / 2;
         }
         var ans = 3.14 * (r ** 2);
+        ans = ans * 100;
+        ans = Math.round(ans);
+        ans = ans/100;
         alert(ans + " units is your answer.");
     }
 }
