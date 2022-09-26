@@ -139,6 +139,9 @@ document.getElementById("submit").onclick = function () {
     b2b.style.color = 'White';
     b3.style.color = 'White';
     b3b.style.color = 'White';
+    //Text Values
+    equ.innerText = "Get Equation";
+    solve.innerText = "Solve";
 
     ///// V ONCLICK
     if (document.getElementById("math-type").value == "AoT") {
@@ -168,13 +171,7 @@ document.getElementById("submit").onclick = function () {
         div.appendChild(fbr);
         div.appendChild(solve);
         div.appendChild(equ);
-
-
-        equ.innerHTML = "Get Equation";
-        solve.innerHTML = "Solve";
-        //BELOW THIS SHOULD NOT BE CHANGED
         x = 1;
-        document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues if you switch type of calculation.";
 
 
         /*COC*/
@@ -192,8 +189,6 @@ document.getElementById("submit").onclick = function () {
         div.appendChild(br3);
         div.appendChild(solve);
         div.appendChild(equ);
-        equ.innerHTML = "Get Equation";
-        solve.innerHTML = "Solve";
         x = 2;
 
 
@@ -212,8 +207,6 @@ document.getElementById("submit").onclick = function () {
         div.appendChild(br3);
         div.appendChild(solve);
         div.appendChild(equ);
-        equ.innerHTML = "Get Equation";
-        solve.innerHTML = "Solve";
         x = true;
 
 
@@ -235,11 +228,35 @@ document.getElementById("submit").onclick = function () {
         div.appendChild(br1);
         div.appendChild(solve);
         div.appendChild(equ);
-        equ.innerHTML = "Get Equation";
-        solve.innerHTML = "Solve";
-        //BELOW THIS SHOULD NOT BE CHANGED
-        document.getElementById("h10").innerHTML = "Refresh after solving, failure to refresh would cause issues if you switch type of calculation.";
         x = 3;
+    } else if (document.getElementById("math-type").value == "SAoCu") {
+        div.appendChild(tx1);
+        tx1.innerHTML = "A Edge: "
+        div.appendChild(b1);
+        div.appendChild(br);
+        div.appendChild(solve);
+        div.appendChild(equ);
+        x = 4;
+    } else if (document.getElementById("math-type".value) == "VoCu") {
+        div.appendChild(tx1);
+        tx1.innerHTML = "A Edge: "
+        div.appendChild(b1);
+        div.appendChild(br);
+        div.appendChild(solve);
+        div.appendChild(equ);
+        x = 5;
+    } else if(document.getElementById("math-type").value == "VoCo") {
+        div.appendChild(tx1);
+        tx1.innerHTML = "Radius: "
+        div.appendChild(b1);
+        div.appendChild(br)
+        div.appendChild(tx2);
+        tx2.innerHTML = "Height: ";
+        div.appendChild(b2);
+        div.appendChild(br1);
+        div.appendChild(solve);
+        div.appendChild(equ);
+        x = 6;
     }
 };
 
