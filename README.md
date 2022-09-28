@@ -1,2 +1,3 @@
 # websitetest
-Literally a website test forced together but has been reperposed to a geometry solver that has been given/taught at my current school.
+Geometry Tester
+Please ***in issues*** tell me what can/should be added! **Thanks!**
