@@ -4,6 +4,7 @@
 /* Note1's text*/ var Note = "Diameter or Radius needs to be filled, leaving blank assumes it is empty and thus 0 (and will be filtered out).";
 /*TX1's text*/ var rt = `&nbsp&nbspRadius: `;
 /*TX2's text*/ var dt = "Diameter: ";
+/*color*/ var co = 'rgb(62, 61, 61)';
 a = 0;
 document.getElementById("submit").onclick = function () {
     //Removes Input Boxes, etc
@@ -122,14 +123,14 @@ document.getElementById("submit").onclick = function () {
         fbr.setAttribute('class', 'br');
     //^ HTML ELEMENTS
     //Color/CSS setting.
-    b1.style.backgroundColor = 'rgb(62, 61, 61)';
-    b1b.style.backgroundColor = 'rgb(62, 61, 61)';
-    b2.style.backgroundColor = 'rgb(62, 61, 61)';
-    b2b.style.backgroundColor = 'rgb(62, 61, 61)';
-    b3.style.backgroundColor = 'rgb(62, 61, 61)';
-    b3b.style.backgroundColor = 'rgb(62, 61, 61)';
-    t1.style.backgroundColor = 'rgb(62, 61, 61)';
-    t2.style.backgroundColor = 'rgb(62, 61, 61)';
+    b1.style.backgroundColor = co; /*  var co = 'rgb(62, 61, 61)'; */
+    b1b.style.backgroundColor = co;
+    b2.style.backgroundColor = co;
+    b2b.style.backgroundColor = co;
+    b3.style.backgroundColor = co;
+    b3b.style.backgroundColor = co;
+    t1.style.backgroundColor = co;
+    t2.style.backgroundColor = co;
     t1.style.color = 'White';
     t2.style.color = 'White';
     b3b.style.color = 'White';
