@@ -5,6 +5,7 @@
 /*TX1's text*/ var rt = `&nbsp&nbspRadius: `;
 /*TX2's text*/ var dt = "Diameter: ";
 /*color*/ var co = 'rgb(62, 61, 61)';
+
 a = 0;
 document.getElementById("submit").onclick = function () {
     //Removes Input Boxes, etc
@@ -238,7 +239,7 @@ document.getElementById("submit").onclick = function () {
         div.appendChild(solve);
         div.appendChild(equ);
         x = 4;
-    } else if (document.getElementById("math-type".value) == "VoCu") {
+    } else if (document.getElementById("math-type").value == "VoCu") {
         div.appendChild(tx1);
         tx1.innerHTML = "A Edge: "
         div.appendChild(b1);
@@ -275,6 +276,10 @@ function equ() {
         alert("√((x₂ - x₁)² + (y₂ - y₁)²)");
     } else if (document.getElementById("math-type").value == "AoC") {
         alert("π(r²)");
+    } else if(document.getElementById("math-type").value == "VoCu") {
+        alert("a³");
+    } else if(document.getElementById("math-type").value == "VoCo") {
+        alert("(πr²h)/3");
     }
 }
 
@@ -285,6 +290,7 @@ function equ() {
 
 
 function solve() {
+    var mathtype = document.getElementById("math-type").value;
     if (document.getElementById("math-type").value == "AoT") {
         sx1 = Number(document.getElementById("b1").value);
         sy1 = Number(document.getElementById("b1b").value);
@@ -369,12 +375,22 @@ function solve() {
         var d = Number(document.getElementById("t2").value);
         if (d == 0) { }
         if (r == 0) {
-            r = d / 2;
+        r = d / 2;
         }
         var ans = 3.14 * (r ** 2);
         ans = ans * 100;
         ans = Math.round(ans);
         ans = ans/100;
+        alert(ans + " units is your answer.");
+    } else if(mathtype == "VoCu"){
+        var a = document.getElementById('tx1').value;
+        var a1 = a**3;
+        alert(a1 + " units is your answer.");
+    } else if(mathtype == "VoCo"){
+        //(πr²h)/3
+        var r = document.getElementById('tx1').value;
+        var h = document.getElementById('tx1').value;
+        var ans = (3.14*(r**2)*h)/3
         alert(ans + " units is your answer.");
     }
 }
