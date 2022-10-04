@@ -389,8 +389,12 @@ function solve() {
     } else if(mathtype == "VoCo"){
         //(πr²h)/3
         var r = document.getElementById('tx1').value;
-        var h = document.getElementById('tx1').value;
+        var h = document.getElementById('tx2').value;
         var ans = (3.14*(r**2)*h)/3
         alert(ans + " units is your answer.");
+    } else if(mathtype == "SAoCu") {
+        var a = document.getElementById("tx1");
+        var ans = 6*(a**2);
+        alert(ans, "units is your answer.")
     }
 }
