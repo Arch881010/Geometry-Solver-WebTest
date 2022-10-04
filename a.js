@@ -383,13 +383,13 @@ function solve() {
         ans = ans/100;
         alert(ans + " units is your answer.");
     } else if(mathtype == "VoCu"){
-        var a = document.getElementById('tx1').value;
+        var a = document.getElementById('b1').value;
         var a1 = a**3;
         alert(a1 + " units is your answer.");
     } else if(mathtype == "VoCo"){
         //(πr²h)/3
-        var r = document.getElementById('tx1').value;
-        var h = document.getElementById('tx2').value;
+        var r = document.getElementById('b1').value;
+        var h = document.getElementById('b2').value;
         var ans = (3.14*(r**2)*h)/3
         alert(ans + " units is your answer.");
     } else if(mathtype == "SAoCu") {
