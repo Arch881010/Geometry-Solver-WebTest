@@ -1,3 +1,11 @@
+//Kebind/letter checker.
+window.addEventListener('keydown', function (e) {
+var c = window.addEventListener('keydown');
+if (c == "r") {
+alert('a');
+}
+}, flase);
+
 /* x = 0 to prevent issue */ x = 0;
 /* Sets DIV */    const div = document.getElementById('div');
 //v ONCLICK
